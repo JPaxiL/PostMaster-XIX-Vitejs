@@ -1,0 +1,79 @@
+.imagenlogin{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../assets/img/background/banner_1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.blur{
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(80px) contrast(150%) brightness(70%);
+}
+.login{
+    width: 22rem;
+    background-color: rgba(0,0,0,0.8);
+    box-shadow: 0px 10px 50px rgba(0,0,0,0.5);
+    padding: 1.5rem;
+    color: #c8c8c8;
+    border-radius: .5rem;
+    transition: width .2s, height .2s;
+}
+.login__title{
+    text-align: center;
+}
+.login__logo{
+    width: 17vh;
+    height: 17vh;
+    margin: 1.5rem 0;
+}
+.login__item{
+    padding: .7rem 1rem;
+}
+.login__item--center{
+    text-align: center;
+}
+.login__label{
+    display: block;
+    padding-bottom: .5rem;
+    color: #c8c8c8;
+    font-size: 1.2rem;
+}
+.login__input{
+    width: 100%;
+    display: block;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid #c8c8c8;
+    border-radius: .2rem;
+    padding: .3rem .5rem;
+    color: #c8c8c8;
+    font-size: 1.2rem;
+}
+.login__input:focus-visible{
+    outline: 1px solid #ffffff;
+}
+
+.login__input--submit{
+    display: inline-block;
+    width: 55%;
+    background-color: #2d00d1;
+    border: 1px solid #2d00d1;
+    border-radius: .4rem;
+    padding: .4rem;
+    font-size: 1.1rem;
+    transform: scale(1);
+    transition: transform .3s;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+.login__input--submit:hover{
+    transform: scale(1.1);
+    background-color: #3408cf;
+}
+.login__createAccount{
+    color: #c8c8c8;
+    padding: .2rem .5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}

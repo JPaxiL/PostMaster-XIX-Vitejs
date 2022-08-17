@@ -1,0 +1,81 @@
+/****section ponentes****/
+.section-ponentes {
+  background-color: #c9d1de;
+  padding: 0 1rem;
+}
+.section-ponentes__cards {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative;
+  z-index: 20;
+  box-shadow: 0px 0px 10px #bdc4d1;
+}
+
+.ponente {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Catamaran', sans-serif;
+  padding: 3vw 6vw 3vw 0px;
+}
+.ponente:nth-of-type(even) {
+  flex-direction: row-reverse;
+  padding: 3vw 0px 3vw 6vw;
+}
+.ponente__ocupacion {
+  margin: 2rem;
+  width: 5%;
+  position: relative;
+}
+.ponente__ocupacion>div {
+  transform: translateX(-50%) translateY(-50%) rotate(90deg);
+  position: absolute;
+  inset: 50% auto auto 25px;
+  width: 400px;
+  height: 50px;
+  justify-content: center;
+  color: #9013fe;
+}
+.ponente__ocupacion span {
+  margin: 0 10px;
+  width: 25px;
+  border-top: 0.5px solid rgba(144, 19, 254, 0.5);
+}
+.ponente__img {
+  width: 15.6rem;
+  height: 25rem;
+  margin: 2rem;
+  box-shadow: 0px 0px 10px #b6bcc6;
+}
+.ponente__info {
+  width: 45%;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.ponente__name {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.6rem;
+}
+.ponente__tema {
+  margin: 0.5rem 0;
+  color: #808080;
+}
+.ponente__description {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  line-height: 30px;
+}
+
+.ponente__redess {
+  margin-top: auto;
+  font-family: 'Source Code Pro', monospace;
+  color: #9013fe;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+.icon__s {
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+}

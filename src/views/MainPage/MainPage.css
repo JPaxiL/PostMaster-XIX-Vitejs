@@ -1,0 +1,13 @@
+.main-page{
+    background-color: #0A192F;
+}
+.main-page .main-logo{
+    position: fixed;
+    width: 13vh;
+    height: 13vh;
+    inset: 1.5rem auto auto 1.5rem;
+    z-index: 30;
+}
+.main-page .header{
+    position: fixed;
+}
