@@ -1,12 +1,12 @@
-import logo from "../../assets/img/logo.png";
-import { useNavigate } from "react-router-dom";
-import "./Login.css";
+const logo = 'https://i.ibb.co/rkMdCQB/logo.png';
+import { useNavigate } from 'react-router-dom';
+import './Login.css';
 
 const Login = () => {
-  const navigate=useNavigate();
-  const charging=()=>{
-    navigate("/main-page")
-  }
+  const navigate = useNavigate();
+  const charging = () => {
+    navigate('/main-page');
+  };
 
   return (
     <div className="imagenlogin">

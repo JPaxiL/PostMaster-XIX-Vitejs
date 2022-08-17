@@ -1,13 +1,12 @@
-import React from "react";
-import "./SectionLocation.css";
-import auditorio from "../../assets/img/place/auditorio_1.jpg";
+import React from 'react';
+import './SectionLocation.css';
 
 const SectionLocation = () => {
   return (
     <section className="section-lugar" id="lugar">
       <div className="locale flx-a-c">
         <div className="locale__img">
-          <img src={auditorio} alt="auditorio" />
+          <img src="#" alt="auditorio" />
         </div>
         <div className="locale__info">
           <h2 className="locale__title">Auditorio de contabilidad</h2>

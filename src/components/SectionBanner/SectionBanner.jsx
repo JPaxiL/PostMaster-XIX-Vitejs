@@ -1,8 +1,8 @@
-import React from "react";
-import "./SectionBanner.css";
+import React from 'react';
+import './SectionBanner.css';
 
-import backgroundbanner from "../../assets/img/background/banner_1.jpg";
-import logo from "../../assets/img/logo.png";
+const backgroundbanner = 'https://i.ibb.co/f9Qd4bC/banner-1.jpg';
+const logo = 'https://i.ibb.co/rkMdCQB/logo.png';
 
 const SectionBanner = () => {
   return (
