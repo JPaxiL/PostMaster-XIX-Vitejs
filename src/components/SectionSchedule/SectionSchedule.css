@@ -14,90 +14,90 @@
 .agenda {
   font-size: 1.35rem;
   line-height: 2.7rem;
-  margin: 1rem auto;  /* revisar  */
+  margin: 1rem auto; /* revisar  */
   color: #ffff;
-  margin-bottom: 25vh;
+  margin-bottom: 20vh;
 }
-.agenda__consulta{
+.agenda__consulta {
   color: rgb(186, 186, 186);
   border-right: 2px solid white;
   display: inline-block;
-  padding-right: .5rem;
+  padding-right: 0.5rem;
   line-height: 1.8rem;
   animation-name: cursor;
-  animation-duration:.7s;
+  animation-duration: 0.7s;
   animation-iteration-count: infinite;
 }
-@keyframes cursor{
-  50%{
+@keyframes cursor {
+  50% {
     border-right: 2px solid transparent;
   }
 }
 
-.agenda__svg-bg{
+.agenda__svg-bg {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 250%;
   transform: translate(-50%, -50%);
 }
-.agenda-container span{
+.agenda-container span {
   display: inline-block;
 }
-.agenda__border{
+.agenda__border {
   width: 60vw;
 }
-.agenda__border .dashed{
+.agenda__border .dashed {
   width: 100%;
   height: 10px;
   border-top: 10px dashed #ffff;
   position: relative;
-  top: .2rem;
+  top: 0.2rem;
 }
-.dashed .dashed2{
+.dashed .dashed2 {
   position: absolute;
   left: 0;
-  top: -.5rem;
+  top: -0.5rem;
   background-color: #040d21;
   border-top: 10px dashed #040d21;
 }
-.agenda__border .mas{
+.agenda__border .mas {
   font-size: 2rem;
   font-weight: 300;
 }
-.agenda__border:nth-child(even){
+.agenda__border:nth-child(even) {
   display: none;
 }
 
-.agenda__ponencia{
+.agenda__ponencia {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
 }
-.agenda__line-start{
+.agenda__line-start {
   height: 2rem;
   border-right: 3px solid #ffff;
   margin-right: 2rem;
 }
-.agenda__line-end{
+.agenda__line-end {
   height: 2rem;
   border-left: 3px solid #ffff;
   margin-left: 2rem;
 }
-.agenda__separator{
+.agenda__separator {
   height: 2rem;
   width: 1rem;
   border-left: 3px solid #ffff;
   border-right: 3px solid #ffff;
   margin: 0 2rem;
 }
-.agenda__data{
+.agenda__data {
   display: inline-block;
   color: #ffff;
   font-family: monospace;
 }
-.agenda__data--event{
+.agenda__data--event {
   flex-grow: 1;
   height: 2.7rem;
   overflow: hidden;
