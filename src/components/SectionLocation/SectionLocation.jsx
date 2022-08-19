@@ -31,25 +31,21 @@ class SectionLocation extends React.Component {
   render() {
     let Event;
     if (this.state.status) {
-      Event = this.state.agenda.map((item) => {
+      Event = this.state.evento.map((evento, index) => {
         return (
           <div className="locale flx-a-c">
             <div className="locale__img">
-              <img src="#" alt="auditorio" />
+              <img src={evento.foto} alt="auditorio" />
             </div>
             <div className="locale__info">
-              <h2 className="locale__title">Auditorio de contabilidad</h2>
+              <h2 className="locale__title">{evento.lugar}</h2>
               <p className="locale__location">
-                <span></span>Av. San Martín S/N
+                <span></span>
+                {evento.direccion}
                 <br />
                 Universidad Nacional Jorge Basadre Grohmann
               </p>
-              <p className="locale__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
-                nemo non voluptatum esse aperiam porro doloremque repudiandae
-                distinctio similique itaque at ad dicta iste corporis ipsa ex
-                perspiciatis. Repudiandae, eaque.
-              </p>
+              <p className="locale__description">{evento.descripLugar}</p>
             </div>
           </div>
         );

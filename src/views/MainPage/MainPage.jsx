@@ -26,7 +26,11 @@ const MainPage = () => {
   return (
     <div className="main-page">
       <a className="main-logo" href="#">
-        <img className="main-logo__img" src="#" alt="Logo-esis-postmaster" />
+        <img
+          className="main-logo__img"
+          src="https://i.ibb.co/rkMdCQB/logo.png"
+          alt="Logo-esis-postmaster"
+        />
       </a>
       <Header state={mainHeader} login={loginState} />
       <Fullpage>
