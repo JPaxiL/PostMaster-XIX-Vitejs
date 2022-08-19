@@ -5,7 +5,6 @@ import ReCAPTCHA from 'react-google-recaptcha';
 class SectionContactUs extends React.Component {
   state = {
     preinscription: [],
-    secret: '6Ld5l4whAAAAAIQdaEb4WtfwWAte-OMXYty9xabS',
     status: false,
     send: false,
     errorMessage: '',
