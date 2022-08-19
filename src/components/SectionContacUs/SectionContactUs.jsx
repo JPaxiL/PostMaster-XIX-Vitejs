@@ -10,9 +10,10 @@ class SectionContactUs extends React.Component {
     send: false,
     errorMessage: '',
     validated: false,
+    recaptcha: false,
   };
   onChange = (value) => {
-    console.log('Captcha value:', value);
+    this.setState({ recaptcha: true });
   };
   preinscription = (e) => {
     const form = e.currentTarget;
@@ -20,61 +21,75 @@ class SectionContactUs extends React.Component {
       e.preventDefault();
       e.stopPropagation();
     } else {
-      this.setState({ send: true });
-      const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          fullName: e.target['0'].value,
-          email: e.target['1'].value,
-          codigoUniv:
-            e.target['2'].value == '' ? '0000-000000' : e.target['2'].value,
-        }),
-      };
-      // GET request using fetch with error handling
-      fetch(global.URL + 'auth/preinscripcion', requestOptions)
-        .then(async (response) => {
-          const data = await response.json();
-          // check for error response
-          //if (!response.ok) {
-          // get error message from body or default to response statusCode
-          //const error = (data && data.message) || response.statusCode;
-          //return Promise.reject(error);
-          //}
-          if (response.status == '201') {
-            this.setState({ preinscription: data, status: true });
-            console.log(this.state.preinscription);
-            var x = document.getElementById('snackbar');
-            x.innerHTML = 'Pre Inscripcion Completada';
-            // Add the "show" class to DIV
-            x.className = 'show';
+      if (this.state.recaptcha) {
+        this.setState({ send: true });
+        const requestOptions = {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            fullName: e.target['0'].value,
+            email: e.target['1'].value,
+            codigoUniv:
+              e.target['2'].value == '' ? '0000-000000' : e.target['2'].value,
+          }),
+        };
+        // GET request using fetch with error handling
+        fetch(global.URL + 'auth/preinscripcion', requestOptions)
+          .then(async (response) => {
+            const data = await response.json();
+            // check for error response
+            //if (!response.ok) {
+            // get error message from body or default to response statusCode
+            //const error = (data && data.message) || response.statusCode;
+            //return Promise.reject(error);
+            //}
+            if (response.status == '201') {
+              this.setState({ preinscription: data, status: true });
+              console.log(this.state.preinscription);
+              var x = document.getElementById('snackbar');
+              x.innerHTML = 'Pre Inscripcion Completada';
+              // Add the "show" class to DIV
+              x.className = 'show';
 
-            // After 3 seconds, remove the show class from DIV
-            setTimeout(function () {
-              x.className = x.className.replace('show', '');
-            }, 3000);
-          } else {
-            this.setState({ send: false });
-            this.setState({ preinscription: data, status: true });
-            console.log(this.state.preinscription);
-            var x = document.getElementById('snackbar');
-            x.innerHTML = 'Error de envio';
-            x.style.backgroundColor = '#a20000';
-            // Add the "show" class to DIV
-            x.className = 'show';
+              // After 3 seconds, remove the show class from DIV
+              setTimeout(function () {
+                x.className = x.className.replace('show', '');
+              }, 3000);
+            } else {
+              this.setState({ send: false });
+              this.setState({ preinscription: data, status: true });
+              console.log(this.state.preinscription);
+              var x = document.getElementById('snackbar');
+              x.innerHTML = 'Error de envio';
+              x.style.backgroundColor = '#a20000';
+              // Add the "show" class to DIV
+              x.className = 'show';
 
-            // After 3 seconds, remove the show class from DIV
-            setTimeout(function () {
-              x.className = x.className.replace('show', '');
-            }, 3000);
-          }
-        })
-        .catch((error) => {
-          this.setState({ errorMessage: error.toString(), status: false });
-        });
+              // After 3 seconds, remove the show class from DIV
+              setTimeout(function () {
+                x.className = x.className.replace('show', '');
+              }, 3000);
+            }
+          })
+          .catch((error) => {
+            this.setState({ errorMessage: error.toString(), status: false });
+          });
+      } else {
+        var x = document.getElementById('snackbar');
+        x.innerHTML = 'Marque el reCAPTCHA';
+        // Add the "show" class to DIV
+        x.className = 'show';
+        x.style.backgroundColor = '#a20000';
+
+        // After 3 seconds, remove the show class from DIV
+        setTimeout(function () {
+          x.className = x.className.replace('show', '');
+        }, 3000);
+      }
       e.preventDefault();
       e.stopPropagation();
     }
+
     this.setState({ validated: true });
   };
   render() {
