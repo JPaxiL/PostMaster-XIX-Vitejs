@@ -14,7 +14,7 @@
   padding: 1rem 2rem;
 }
 .contactanos__title .lined {
-  margin: 0 2.5rem .8rem;
+  margin: 0 2.5rem 0.8rem;
   border-bottom: 1px solid #9013fe;
 }
 .contactanos__title h1 {
@@ -43,11 +43,11 @@
   color: #8d8d8d;
   font-size: 0.8rem;
 }
-.contactanos__info > div{
+.contactanos__info > div {
   flex-grow: 1;
   flex-basis: 0;
 }
-.contactanos__info .main-nav__link{
+.contactanos__info .main-nav__link {
   margin-left: 1rem;
 }
 .contactanos__form {
@@ -102,4 +102,7 @@
   height: 100px;
   background-color: #cccccc;
   margin: 1rem;
+}
+.div-g {
+  display: inline;
 }

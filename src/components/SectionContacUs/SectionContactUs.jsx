@@ -1,5 +1,6 @@
-import React from "react";
-import "./SectionContacUs.css"
+import React from 'react';
+import './SectionContacUs.css';
+import reCAPTCHA from 'react-google-recaptcha';
 
 const SectionContactUs = () => {
   return (
@@ -52,7 +53,7 @@ const SectionContactUs = () => {
             <a
               className="main-nav__link main-nav__link--inscrip"
               href="./#contactanos"
-              style={{padding: '1rem'}}
+              style={{ padding: '1rem' }}
             >
               Pre-inscripción
             </a>
@@ -93,12 +94,37 @@ const SectionContactUs = () => {
               </label>
             </div>
             <div className="inputs flx-a-c">
-              <div className="recaptcha"></div>
+              <div className="recaptcha">
+                <div
+                  className="g-recaptcha"
+                  data-sitekey="6Ld5l4whAAAAAMALvbDlozxx6Nk5tcB-lFHq-HAW"
+                ></div>
+              </div>
+              <div
+                className="div-g g-recaptcha"
+                data-sitekey="6Ld5l4whAAAAAMALvbDlozxx6Nk5tcB-lFHq-HAW"
+              ></div>
               <input className="enviar" type="submit" value="Enviar" />
             </div>
+            <div
+              className="div-g g-recaptcha"
+              data-sitekey="6Ld5l4whAAAAAMALvbDlozxx6Nk5tcB-lFHq-HAW"
+            ></div>
           </form>
+          <div
+            className="div-g g-recaptcha"
+            data-sitekey="6Ld5l4whAAAAAMALvbDlozxx6Nk5tcB-lFHq-HAW"
+          ></div>
         </div>
+        <div
+          className="div-g g-recaptcha"
+          data-sitekey="6Ld5l4whAAAAAMALvbDlozxx6Nk5tcB-lFHq-HAW"
+        ></div>
       </div>
+      <div
+        className="div-g g-recaptcha"
+        data-sitekey="6Ld5l4whAAAAAMALvbDlozxx6Nk5tcB-lFHq-HAW"
+      ></div>
     </section>
   );
 };
